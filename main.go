@@ -19,7 +19,7 @@ func getDesktopPath() string {
 }
 
 func main() {
-	args := os.Args
+	args := os.Args[1:]
 	ay_text := strings.Join(args, " ")
 	current_time := time.Now().Format(time.RFC3339)
 
