@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-func getDesktopPath() string {
+func getAyFile() string {
 	myself, error := user.Current()
 	if error != nil {
 		panic(error)
@@ -20,10 +20,10 @@ func getDesktopPath() string {
 
 func main() {
 	args := os.Args[1:]
-	ay_text := strings.Join(args, " ")
-	current_time := time.Now().Format(time.RFC3339)
+	ayText := strings.Join(args, " ")
+	currentTime := time.Now().Format(time.RFC3339)
 
-	filePath := getDesktopPath()
+	filePath := getAyFile()
 
 	f, err := os.OpenFile(filePath, os.O_APPEND|os.O_WRONLY|os.O_CREATE, 0600)
 
@@ -31,7 +31,7 @@ func main() {
 		panic(err)
 	}
 
-	if _, err = f.WriteString(fmt.Sprintf("%s: %s\n", current_time, ay_text)); err != nil {
+	if _, err = f.WriteString(fmt.Sprintf("%s: %s\n", currentTime, ayText)); err != nil {
 		panic(err)
 	}
 
