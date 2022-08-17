@@ -2,7 +2,7 @@
 Evertime someone anyoyes you during work call ay and log it! 
 
 ```bash 
-    ay anna sends me 1000 messages on whatsapp ;)     
+ay anna sends me 1000 messages on whatsapp ;)     
 
 ```
 
